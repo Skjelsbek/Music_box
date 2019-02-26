@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Feb 26 11:45:56 2019
-# Process ID: 19200
+# Start of session at: Tue Feb 26 15:25:18 2019
+# Process ID: 14400
 # Current directory: D:/programming/vhdl_projects/Music_box/Music_box.runs/synth_1
 # Command line: vivado.exe -log top_block.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block.tcl
 # Log file: D:/programming/vhdl_projects/Music_box/Music_box.runs/synth_1/top_block.vds
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10160 
+INFO: Helper process launched with PID 10600 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 379.789 ; gain = 100.012
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 379.867 ; gain = 99.074
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_block' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'top_block' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:18]
 INFO: [Synth 8-638] synthesizing module 'uart' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd:30]
 	Parameter DBIT bound to: 8 - type: integer 
 	Parameter SB_TICK bound to: 16 - type: integer 
@@ -34,6 +34,7 @@ INFO: [Synth 8-638] synthesizing module 'uart_rx' [D:/programming/vhdl_projects/
 	Parameter DBIT bound to: 8 - type: integer 
 	Parameter SB_TICK bound to: 16 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart_rx.vhd:22]
+WARNING: [Synth 8-614] signal 'rx_data_out' is read in the process but is not in the sensitivity list [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd:125]
 INFO: [Synth 8-256] done synthesizing module 'uart' (3#1) [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd:30]
 INFO: [Synth 8-638] synthesizing module 'duration_cntr' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/duration_cntr.vhd:20]
 	Parameter N bound to: 26 - type: integer 
@@ -54,9 +55,9 @@ INFO: [Synth 8-638] synthesizing module 'ASCII_decoder' [D:/programming/vhdl_pro
 INFO: [Synth 8-256] done synthesizing module 'ASCII_decoder' (8#1) [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/ASCII_decoder.vhd:17]
 INFO: [Synth 8-638] synthesizing module 'clk_divider' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/clk_divider.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'clk_divider' (9#1) [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/clk_divider.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'top_block' (10#1) [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'top_block' (10#1) [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:18]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.234 ; gain = 156.457
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 436.039 ; gain = 155.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -69,10 +70,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.234 ; gain = 156.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 436.039 ; gain = 155.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.234 ; gain = 156.457
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 436.039 ; gain = 155.246
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -83,30 +84,30 @@ Parsing XDC File [D:/programming/vhdl_projects/Music_box/Music_box.srcs/constrs_
 Finished Parsing XDC File [D:/programming/vhdl_projects/Music_box/Music_box.srcs/constrs_1/new/music_box_xdc.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/programming/vhdl_projects/Music_box/Music_box.srcs/constrs_1/new/music_box_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_block_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_block_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 770.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 770.168 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 770.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 770.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 770.066 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 770.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 770.168 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 770.168 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 770.066 ; gain = 490.289
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 770.168 ; gain = 489.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 770.066 ; gain = 490.289
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 770.168 ; gain = 489.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 770.066 ; gain = 490.289
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 770.168 ; gain = 489.375
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "max_tick" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_rx'
@@ -127,17 +128,18 @@ INFO: [Synth 8-5546] ROM "freq" won't be mapped to RAM because it is too sparse
                     stop |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+WARNING: [Synth 8-327] inferring latch for variable 'r_data_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd:128]
 WARNING: [Synth 8-327] inferring latch for variable 'r_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/addr_cntr.vhd:33]
 WARNING: [Synth 8-327] inferring latch for variable 'ASCII_out_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/approve_ASCII.vhd:45]
 WARNING: [Synth 8-327] inferring latch for variable 'done_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/ASCII_decoder.vhd:49]
 WARNING: [Synth 8-327] inferring latch for variable 'freq_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/ASCII_decoder.vhd:59]
-WARNING: [Synth 8-327] inferring latch for variable 'play_en_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:145]
-WARNING: [Synth 8-327] inferring latch for variable 'state_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:143]
-WARNING: [Synth 8-327] inferring latch for variable 'wr_en_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:144]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cntr_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:146]
-WARNING: [Synth 8-327] inferring latch for variable 'inc_cntr_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:147]
+WARNING: [Synth 8-327] inferring latch for variable 'play_en_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:147]
+WARNING: [Synth 8-327] inferring latch for variable 'state_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:145]
+WARNING: [Synth 8-327] inferring latch for variable 'wr_en_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:146]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cntr_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:148]
+WARNING: [Synth 8-327] inferring latch for variable 'inc_cntr_next_reg' [D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd:149]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 770.066 ; gain = 490.289
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 770.168 ; gain = 489.375
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,7 +318,7 @@ INFO: [Synth 8-3886] merging instance 'c_ASCII_decoder/freq_reg[30]' (LD) to 'c_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_ASCII_decoder/freq_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (c_ASCII_decoder/freq_reg[31]) is unused and will be removed from module top_block.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 770.066 ; gain = 490.289
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 770.168 ; gain = 489.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -343,13 +345,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 770.066 ; gain = 490.289
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 770.168 ; gain = 489.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 785.012 ; gain = 505.234
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 786.426 ; gain = 505.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -375,7 +377,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,7 +401,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -412,7 +414,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,25 +426,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -463,58 +465,58 @@ Report Cell Usage:
 |3     |LUT1      |    21|
 |4     |LUT2      |   394|
 |5     |LUT3      |   275|
-|6     |LUT4      |    23|
+|6     |LUT4      |    24|
 |7     |LUT5      |    28|
 |8     |LUT6      |    35|
 |9     |RAM256X1S |     8|
 |10    |FDCE      |    89|
 |11    |FDRE      |     3|
-|12    |LD        |    25|
+|12    |LD        |    33|
 |13    |LDC       |     8|
 |14    |IBUF      |     4|
-|15    |OBUF      |     1|
+|15    |OBUF      |    10|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+------------------+--------------+------+
 |      |Instance          |Module        |Cells |
 +------+------------------+--------------+------+
-|1     |top               |              |  1100|
+|1     |top               |              |  1118|
 |2     |  c_ASCII_decoder |ASCII_decoder |   857|
 |3     |  c_addr_cntr     |addr_cntr     |    25|
 |4     |  c_approve_ASCII |approve_ASCII |    19|
 |5     |  c_clk_divider   |clk_divider   |    17|
 |6     |  c_duration_cntr |duration_cntr |    66|
 |7     |  c_ram           |ram_async     |    24|
-|8     |  c_uart          |uart          |    66|
+|8     |  c_uart          |uart          |    75|
 |9     |    baud_gen_unit |mod_m_counter |    25|
-|10    |    uart_rx_unit  |uart_rx       |    41|
+|10    |    uart_rx_unit  |uart_rx       |    38|
 +------+------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 785.777 ; gain = 172.168
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 785.777 ; gain = 506.000
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 787.191 ; gain = 172.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 787.191 ; gain = 506.398
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 226 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 234 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 785.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 787.191 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 41 instances were transformed.
-  LD => LDCE: 25 instances
+  A total of 49 instances were transformed.
+  LD => LDCE: 33 instances
   LDC => LDCE: 8 instances
   RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-69 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+69 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 785.777 ; gain = 518.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 785.777 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 787.191 ; gain = 518.648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 787.191 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/programming/vhdl_projects/Music_box/Music_box.runs/synth_1/top_block.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_utilization_synth.rpt -pb top_block_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 26 11:46:26 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 26 15:25:49 2019...

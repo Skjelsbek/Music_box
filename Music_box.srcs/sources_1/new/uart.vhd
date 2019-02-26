@@ -19,9 +19,9 @@ entity uart is
         clk, reset: in std_logic;
         --rd_uart, wr_uart: in std_logic;
         rx: in std_logic;
-        rx_done: out std_logic;
         --w_data: in std_logic_vector(7 downto 0);
         --tx_full, rx_empty: out std_logic;
+        rx_done: out std_logic;
         r_data: out std_logic_vector(7 downto 0)
         --tx: out std_logic
     );
@@ -30,9 +30,9 @@ end uart;
 architecture str_arch of uart is
 
     signal tick: std_logic;
-    --signal rx_done_tick: std_logic;
+    signal rx_done_tick: std_logic;
     --signal tx_fifo_out: std_logic_vector(7 downto 0);
-    --signal rx_data_out: std_logic_vector(7 downto 0);
+    signal rx_data_out: std_logic_vector(7 downto 0);
     --signal tx_empty, tx_fifo_not_empty: std_logic;
     --signal tx_done_tick: std_logic;
     
@@ -64,8 +64,8 @@ begin
             reset => reset,
             rx => rx,
             s_tick => tick,
-            rx_done_tick => rx_done,
-            dout => r_data
+            rx_done_tick => rx_done_tick,
+            dout => rx_data_out
         );
         
 --    fifo_rx_unit: entity work.fifo(arch)
@@ -122,10 +122,12 @@ begin
 --        );
 --    tx_fifo_not_empty <= not tx_empty;
 
---    process(rx_done_tick)
---    begin
---        if(rx_done_tick = '1') then
---            r_data <= rx_data_out;
---        end if;
---    end process;
+    process(rx_done_tick)
+    begin
+        if(rx_done_tick = '1') then
+            r_data <= rx_data_out;
+        end if;
+    end process;
+    
+    rx_done <= rx_done_tick;
 end str_arch;

@@ -1,0 +1,11 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/programming/vhdl_projects/Music_box/Music_box.sim/sim_1/synth/func/xsim/top_block_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ASCII_decoder'
+INFO: [VRFC 10-3107] analyzing entity 'addr_cntr'
+INFO: [VRFC 10-3107] analyzing entity 'approve_ASCII'
+INFO: [VRFC 10-3107] analyzing entity 'clk_divider'
+INFO: [VRFC 10-3107] analyzing entity 'duration_cntr'
+INFO: [VRFC 10-3107] analyzing entity 'mod_m_counter'
+INFO: [VRFC 10-3107] analyzing entity 'ram_async'
+INFO: [VRFC 10-3107] analyzing entity 'uart_rx'
+INFO: [VRFC 10-3107] analyzing entity 'uart'
+INFO: [VRFC 10-3107] analyzing entity 'top_block'

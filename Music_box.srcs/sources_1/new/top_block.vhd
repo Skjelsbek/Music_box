@@ -9,6 +9,8 @@ entity top_block is
         play_btn: in std_logic;
         rx: in std_logic;
         --note: in std_logic_vector(7 downto 0);
+        rx_done_out: out std_logic;
+        r_data_out: out std_logic_vector(7 downto 0);
         divided_clk: out std_logic
     );
 end top_block;
@@ -189,5 +191,7 @@ begin
                 end if;
         end case;
     end process;    
-            
+    
+    rx_done_out <= rx_done;
+    r_data_out <= r_data;           
 end arch;

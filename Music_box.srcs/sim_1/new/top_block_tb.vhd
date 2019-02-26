@@ -13,15 +13,31 @@ architecture Behavioral of top_block_tb is
     signal rx: std_logic;
     signal divided_clk: std_logic;
     signal rx_data: std_logic_vector(7 downto 0);
-        
+    signal rx_done_out: std_logic;
+    signal r_data_out: std_logic_vector(7 downto 0);
+    
+    component top_block is
+        port
+        (
+            clk, rst: in std_logic;
+            play_btn: in std_logic;
+            rx: in std_logic;
+            --note: in std_logic_vector(7 downto 0);
+            rx_done_out: out std_logic;
+            r_data_out: out std_logic_vector(7 downto 0);
+            divided_clk: out std_logic
+        );
+        end component top_block;
 begin
-    UUT: entity work.top_block(arch)
+    UUT: top_block
         port map
         (
             clk => clk,
             rst => rst,
             play_btn => play_btn,
             rx => rx,
+            rx_done_out => rx_done_out,
+            r_data_out => r_data_out,
             divided_clk => divided_clk           
         );
         

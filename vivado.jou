@@ -1,0 +1,102 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 26 14:57:58 2019
+# Process ID: 2188
+# Current directory: D:/programming/vhdl_projects/Music_box
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16484 D:\programming\vhdl_projects\Music_box\Music_box.xpr
+# Log file: D:/programming/vhdl_projects/Music_box/vivado.log
+# Journal file: D:/programming/vhdl_projects/Music_box\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/programming/vhdl_projects/Music_box/Music_box.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_simulation
+source top_block_tb.tcl
+run 10 ms
+relaunch_sim
+run 10 ms
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+source top_block_tb.tcl
+run 10 ms
+relaunch_sim
+run 10 ms
+relaunch_sim
+run 10 ms
+close_sim
+close_sim
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+source top_block_tb.tcl
+run 10 ms
+relaunch_sim
+run 10 ms
+add_bp {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} 44
+relaunch_sim
+step
+step
+step
+step
+step
+step
+step
+step
+step
+add_bp {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} 70
+step
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run 900 ns
+run 900 ns
+remove_bps -all
+run 900 ns
+add_bp {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} 44
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+remove_bps -file {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} -line 44
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 900 ns
+run 10 ms
+relaunch_sim
+run 10 ms
+relaunch_sim
+run 10 ms
+close_sim
