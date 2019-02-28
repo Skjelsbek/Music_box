@@ -53,6 +53,7 @@ begin
     process(play_en, note)
     begin
         if (play_en = '1') then
+            done_next <= '0';
             -- choose frequency based on input
             case note is
                 when x"20" => done_next <= '1';

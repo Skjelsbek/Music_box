@@ -23,8 +23,7 @@ architecture Behavioral of top_block_tb is
             play_btn: in std_logic;
             rx: in std_logic;
             --note: in std_logic_vector(7 downto 0);
-            rx_done_out: out std_logic;
-            r_data_out: out std_logic_vector(7 downto 0);
+
             divided_clk: out std_logic
         );
         end component top_block;
@@ -36,8 +35,6 @@ begin
             rst => rst,
             play_btn => play_btn,
             rx => rx,
-            rx_done_out => rx_done_out,
-            r_data_out => r_data_out,
             divided_clk => divided_clk           
         );
         

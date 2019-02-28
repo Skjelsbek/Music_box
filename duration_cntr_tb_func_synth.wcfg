@@ -3,40 +3,60 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="duration_cntr_tb_func_synth.wdb" id="1">
+      <db_ref path="top_block_cntrl_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="duration_cntr_tb" />
+            <top_module name="top_block_cntrl_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1488000001fs"></ZoomEndTime>
-      <Cursor1Time time="56452000fs"></Cursor1Time>
+      <ZoomEndTime time="1469879312fs"></ZoomEndTime>
+      <Cursor1Time time="214000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="91"></NameColumnWidth>
-      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+      <NameColumnWidth column_width="154"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
-   <wvobject fp_name="/duration_cntr_tb/en" type="logic">
-      <obj_property name="ElementShortName">en</obj_property>
-      <obj_property name="ObjectShortName">en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/duration_cntr_tb/clk" type="logic">
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/top_block_cntrl_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/duration_cntr_tb/rst" type="logic">
+   <wvobject fp_name="/top_block_cntrl_tb/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/duration_cntr_tb/max_tick" type="logic">
-      <obj_property name="ElementShortName">max_tick</obj_property>
-      <obj_property name="ObjectShortName">max_tick</obj_property>
+   <wvobject fp_name="/top_block_cntrl_tb/play_btn" type="logic">
+      <obj_property name="ElementShortName">play_btn</obj_property>
+      <obj_property name="ObjectShortName">play_btn</obj_property>
    </wvobject>
-   <wvobject fp_name="/duration_cntr_tb/q" type="array">
-      <obj_property name="ElementShortName">q[3:0]</obj_property>
-      <obj_property name="ObjectShortName">q[3:0]</obj_property>
+   <wvobject fp_name="/top_block_cntrl_tb/approved" type="logic">
+      <obj_property name="ElementShortName">approved</obj_property>
+      <obj_property name="ObjectShortName">approved</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_cntrl_tb/s_tick" type="logic">
+      <obj_property name="ElementShortName">s_tick</obj_property>
+      <obj_property name="ObjectShortName">s_tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_cntrl_tb/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_cntrl_tb/play_en" type="logic">
+      <obj_property name="ElementShortName">play_en</obj_property>
+      <obj_property name="ObjectShortName">play_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_cntrl_tb/rst_cntr" type="logic">
+      <obj_property name="ElementShortName">rst_cntr</obj_property>
+      <obj_property name="ObjectShortName">rst_cntr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_cntrl_tb/inc_cntr" type="logic">
+      <obj_property name="ElementShortName">inc_cntr</obj_property>
+      <obj_property name="ObjectShortName">inc_cntr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_cntrl_tb/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
    </wvobject>
 </wave_config>

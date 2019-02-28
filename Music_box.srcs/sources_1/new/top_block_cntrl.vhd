@@ -23,7 +23,7 @@ type state is (wr_state, idle, play);
     signal state_next : state := wr_state;
 
     signal wr_en_next: std_logic;
-	signal play_en_next: std_logic;
+	signal play_en_next: std_logic := '0';
     signal rst_cntr_next: std_logic := '0';
     signal inc_cntr_next: std_logic;
 
@@ -36,6 +36,9 @@ begin
         if (rst = '1') then
             state_reg <= wr_state;
             wr_en <= '0';  
+            play_en <= '0';
+            rst_cntr <= '0';
+            inc_cntr <= '0';
         elsif (rising_edge(clk)) then
             state_reg <= state_next;
             wr_en <= wr_en_next;
