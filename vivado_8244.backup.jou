@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Feb 28 16:59:06 2019
+# Process ID: 8244
+# Current directory: C:/Users/vwsko/Documents/GitHub/Music_box
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14516 C:\Users\vwsko\Documents\GitHub\Music_box\Music_box.xpr
+# Log file: C:/Users/vwsko/Documents/GitHub/Music_box/vivado.log
+# Journal file: C:/Users/vwsko/Documents/GitHub/Music_box\vivado.jou
+#-----------------------------------------------------------
+start_gui

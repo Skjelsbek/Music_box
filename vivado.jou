@@ -2,101 +2,55 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Feb 26 14:57:58 2019
-# Process ID: 2188
-# Current directory: D:/programming/vhdl_projects/Music_box
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16484 D:\programming\vhdl_projects\Music_box\Music_box.xpr
-# Log file: D:/programming/vhdl_projects/Music_box/vivado.log
-# Journal file: D:/programming/vhdl_projects/Music_box\vivado.jou
+# Start of session at: Thu Feb 28 19:05:56 2019
+# Process ID: 2700
+# Current directory: C:/Users/vwsko/Documents/GitHub/Music_box
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4344 C:\Users\vwsko\Documents\GitHub\Music_box\Music_box.xpr
+# Log file: C:/Users/vwsko/Documents/GitHub/Music_box/vivado.log
+# Journal file: C:/Users/vwsko/Documents/GitHub/Music_box\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/programming/vhdl_projects/Music_box/Music_box.xpr
+open_project C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.xpr
 update_compile_order -fileset sources_1
-reset_run synth_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.srcs/sim_1/new/duration_cntr_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.srcs/sim_1/new/duration_cntr_tb.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top duration_cntr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top duration_cntr [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top_arch arch [get_filesets sim_1]
+set_property top_file C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.srcs/sources_1/new/duration_cntr.vhd [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top duration_cntr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top addr_cntr [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
 launch_simulation
-source top_block_tb.tcl
-run 10 ms
-relaunch_sim
-run 10 ms
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
+launch_simulation
+launch_simulation
+source duration_cntr_tb.tcl
 launch_simulation -mode post-synthesis -type functional
-source top_block_tb.tcl
-run 10 ms
-relaunch_sim
-run 10 ms
-relaunch_sim
-run 10 ms
-close_sim
-close_sim
-close_design
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-launch_simulation -mode post-synthesis -type functional
-source top_block_tb.tcl
-run 10 ms
-relaunch_sim
-run 10 ms
-add_bp {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} 44
-relaunch_sim
-step
-step
-step
-step
-step
-step
-step
-step
-step
-add_bp {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} 70
-step
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run 900 ns
-run 900 ns
-remove_bps -all
-run 900 ns
-add_bp {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} 44
-run all
-step
-step
-step
-step
-step
-step
-step
-step
-step
-step
-remove_bps -file {D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd} -line 44
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 900 ns
-run 10 ms
-relaunch_sim
-run 10 ms
-relaunch_sim
-run 10 ms
-close_sim
+source duration_cntr_tb.tcl
+save_wave_config {C:/Users/vwsko/Documents/GitHub/Music_box/duration_cntr_tb_func_synth.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/vwsko/Documents/GitHub/Music_box/duration_cntr_tb_func_synth.wcfg
+set_property xsim.view C:/Users/vwsko/Documents/GitHub/Music_box/duration_cntr_tb_func_synth.wcfg [get_filesets sim_1]

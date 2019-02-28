@@ -1,6 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'uart'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_block'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top_block_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.srcs/sim_1/new/duration_cntr_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duration_cntr_tb'

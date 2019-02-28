@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Music_box.srcs/sources_1/new/duration_cntr.vhd" \
+"../../../../Music_box.srcs/sim_1/new/duration_cntr_tb.vhd" \
+
+# Do not sort compile order
+nosort
