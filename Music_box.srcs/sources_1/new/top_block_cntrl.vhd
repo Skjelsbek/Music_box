@@ -8,6 +8,7 @@ entity top_block_cntrl is
     		rst : in STD_LOGIC;
            	play_btn : in STD_LOGIC;
            	approved : in STD_LOGIC;
+           	done_recv : in STD_LOGIC;
            	s_tick : in STD_LOGIC;
            	done : in STD_LOGIC;
            	play_en : out STD_LOGIC;
@@ -53,21 +54,22 @@ begin
     begin
 
     	state_next <= state_reg;
-
+		wr_en_next <= '0';
+        inc_cntr_next <= '0';
         case (state_reg) is
             when wr_state =>
                 
-                wr_en_next <= '0';
-                inc_cntr_next <= '0';
+                
                 
                 if (done = '0') then 
                     if (approved ='1') then
                         wr_en_next <= '1';
                         inc_cntr_next <= '1';
-                    --elsif unsigned(r_data) = x"20" then
-                    --    state_next <= idle;
+                    	if (done_recv = '1') then
+                    		state_next <= idle;
+                    	end if;
                     end if;
-                else
+                else -- This will never, ever happen
                     state_next <= idle;
                 end if;
             when idle =>

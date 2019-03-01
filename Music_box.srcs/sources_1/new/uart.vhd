@@ -36,6 +36,7 @@ architecture str_arch of uart is
     --signal tx_empty, tx_fifo_not_empty: std_logic;
     --signal tx_done_tick: std_logic;
     
+
 begin
 
     baud_gen_unit: entity work.mod_m_counter(arch)

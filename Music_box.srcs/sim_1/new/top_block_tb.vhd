@@ -13,8 +13,8 @@ architecture Behavioral of top_block_tb is
     signal rx: std_logic;
     signal divided_clk: std_logic;
     signal rx_data: std_logic_vector(7 downto 0);
-    signal rx_done_out: std_logic;
-    signal r_data_out: std_logic_vector(7 downto 0);
+    --signal rx_done_out: std_logic;
+    --signal r_data_out: std_logic_vector(7 downto 0);
     
     component top_block is
         port
@@ -93,7 +93,7 @@ begin
         
         rx <= '1';
         
-        wait for 30 ns;
+        wait for 80 ns;
         play_btn <= '1';
         wait;    
     end process;

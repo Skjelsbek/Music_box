@@ -29,10 +29,31 @@ architecture arch of top_block is
     signal rx_done: std_logic;
     signal r_data: std_logic_vector(dbw - 1 downto 0);
     signal approved: std_logic;
+    signal done_recv : std_logic;
     signal done: std_logic;
     
+    component top_block_cntrl is
+    Port (  clk : in STD_LOGIC;
+            rst : in STD_LOGIC;
+            play_btn : in STD_LOGIC;
+            approved : in STD_LOGIC;
+            done_recv : in STD_LOGIC;
+            s_tick : in STD_LOGIC;
+            done : in STD_LOGIC;
+            play_en : out STD_LOGIC;
+            rst_cntr : out STD_LOGIC;
+            inc_cntr : out STD_LOGIC;
+            wr_en : out STD_LOGIC);
+end component top_block_cntrl;
     
 begin    
+
+    c_cntrl: top_block_cntrl
+    port map (clk => clk, rst => rst, play_btn => play_btn,
+        approved => approved, done_recv => done_recv,
+        s_tick => s_tick, done => done, play_en => play_en,
+        rst_cntr => rst_cntr, inc_cntr => inc_cntr,
+        wr_en => wr_en);
     
     c_uart: entity work.uart(str_arch)
     port map
@@ -85,7 +106,8 @@ begin
             ASCII_in => r_data,
             rx_done => rx_done,
             ASCII_out => rdbi,
-            approved => approved
+            approved => approved,
+            done_recv => done_recv
         );
     
     c_ram: entity work.ram_async(arch)

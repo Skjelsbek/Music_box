@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_block_tb_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="top_block_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="35000001fs"></ZoomEndTime>
+      <Cursor1Time time="52250000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="137"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/top_block_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/play_btn" type="logic">
+      <obj_property name="ElementShortName">play_btn</obj_property>
+      <obj_property name="ObjectShortName">play_btn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/rx" type="logic">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/divided_clk" type="logic">
+      <obj_property name="ElementShortName">divided_clk</obj_property>
+      <obj_property name="ObjectShortName">divided_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/rx_data" type="array">
+      <obj_property name="ElementShortName">rx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/c_cntrl/state_reg" type="array">
+      <obj_property name="ElementShortName">state_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/done_recv" type="logic">
+      <obj_property name="ElementShortName">done_recv</obj_property>
+      <obj_property name="ObjectShortName">done_recv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/approved" type="logic">
+      <obj_property name="ElementShortName">approved</obj_property>
+      <obj_property name="ObjectShortName">approved</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/done_recv" type="logic">
+      <obj_property name="ElementShortName">done_recv</obj_property>
+      <obj_property name="ObjectShortName">done_recv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/c_uart/rx_done" type="logic">
+      <obj_property name="ElementShortName">rx_done</obj_property>
+      <obj_property name="ObjectShortName">rx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/c_uart/baud_gen_unit/r_reg" type="array">
+      <obj_property name="ElementShortName">r_reg[8:0]</obj_property>
+      <obj_property name="ObjectShortName">r_reg[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/c_uart/uart_rx_unit/s_next" type="logic">
+      <obj_property name="ElementShortName">s_next</obj_property>
+      <obj_property name="ObjectShortName">s_next</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_block_tb/UUT/c_uart/tick" type="logic">
+      <obj_property name="ElementShortName">tick</obj_property>
+      <obj_property name="ObjectShortName">tick</obj_property>
+   </wvobject>
+</wave_config>

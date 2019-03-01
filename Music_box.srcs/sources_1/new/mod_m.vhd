@@ -19,9 +19,12 @@ end mod_m_counter;
 
 architecture arch of mod_m_counter is
 
-    signal r_reg: unsigned(N-1 downto 0);
-    signal r_next: unsigned(N-1 downto 0);
-    
+    signal r_reg: unsigned(N-1 downto 0) := (others => '0');
+    signal r_next: unsigned(N-1 downto 0)  := (others => '0');
+    attribute keep : string;
+    attribute keep of r_reg : signal is "true";
+    attribute keep of r_next : signal is "true";
+    attribute keep of max_tick : signal is "true";
 begin
     -- register
     process(clk, reset)

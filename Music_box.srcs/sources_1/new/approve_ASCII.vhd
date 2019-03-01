@@ -13,7 +13,8 @@ entity approve_ASCII is
         ASCII_in: in std_logic_vector(DBIT - 1 downto 0);
         rx_done: in std_logic;
         ASCII_out: out std_logic_vector(DBIT - 1 downto 0);
-        approved: out std_logic
+        approved: out std_logic;
+        done_recv : out std_logic
     );
 end approve_ASCII;
 
@@ -29,6 +30,7 @@ architecture arch of approve_ASCII is
     end is_approved;
     
     signal approved_next: std_logic := '0';
+    signal done_recv_next: std_logic := '0';
     signal ASCII_out_next: std_logic_vector(DBIT - 1 downto 0);
 
 begin
@@ -40,19 +42,26 @@ begin
         if (rst = '1') then
             approved <= '0';
             ASCII_out <= (others => '0');
+            done_recv <= '0';
         elsif (rising_edge(clk)) then
             approved <= approved_next;
             ASCII_out <= ASCII_out_next;
+            done_recv <= done_recv_next;
         end if;
     end process;
     
     -- Next-state and output logic
     process (ASCII_in, rx_done)
     begin
+        approved_next <= '0';  
+        done_recv_next <= '0';
         if (rx_done = '1') then
             if (is_approved(ASCII_in)) then
                 ASCII_out_next <= ASCII_in;
                 approved_next <= '1';  
+                if (unsigned(ASCII_in) = x"20") then
+                    done_recv_next <= '1';
+                end if;
             else
                 approved_next <= '0';      
             end if;
