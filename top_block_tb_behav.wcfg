@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="35000001fs"></ZoomEndTime>
-      <Cursor1Time time="52250000fs"></Cursor1Time>
+      <ZoomEndTime time="10001000000001fs"></ZoomEndTime>
+      <Cursor1Time time="5837640100000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="137"></NameColumnWidth>
+      <NameColumnWidth column_width="132"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/top_block_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -59,10 +59,6 @@
       <obj_property name="ElementShortName">done_recv</obj_property>
       <obj_property name="ObjectShortName">done_recv</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_block_tb/UUT/c_uart/rx_done" type="logic">
-      <obj_property name="ElementShortName">rx_done</obj_property>
-      <obj_property name="ObjectShortName">rx_done</obj_property>
-   </wvobject>
    <wvobject fp_name="/top_block_tb/UUT/c_uart/baud_gen_unit/r_reg" type="array">
       <obj_property name="ElementShortName">r_reg[8:0]</obj_property>
       <obj_property name="ObjectShortName">r_reg[8:0]</obj_property>
@@ -70,9 +66,5 @@
    <wvobject fp_name="/top_block_tb/UUT/c_uart/uart_rx_unit/s_next" type="logic">
       <obj_property name="ElementShortName">s_next</obj_property>
       <obj_property name="ObjectShortName">s_next</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_block_tb/UUT/c_uart/tick" type="logic">
-      <obj_property name="ElementShortName">tick</obj_property>
-      <obj_property name="ObjectShortName">tick</obj_property>
    </wvobject>
 </wave_config>

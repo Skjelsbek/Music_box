@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity addr_cntr is
     generic
     (
-        N: integer := 4;     -- number of bits
+        N: integer := 8;     -- number of bits
         M: integer := 10     -- mod-M
     );
     port

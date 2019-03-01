@@ -127,6 +127,8 @@ begin
     begin
         if(rx_done_tick = '1') then
             r_data <= rx_data_out;
+        else
+            r_data <= (others => '0');
         end if;
     end process;
     

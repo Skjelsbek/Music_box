@@ -50,7 +50,7 @@ begin
     end process;
     
     -- Next-state
-    process (state_reg, play_btn, approved, s_tick, done)
+    process (state_reg, play_btn, approved, s_tick, done, done_recv)
     begin
 
     	state_next <= state_reg;
