@@ -37,6 +37,8 @@ begin
     -- next-state logic
     process (inc_cntr, rst_cntr, r_reg)
     begin
+        r_next <= r_reg;
+        
         if (rst_cntr = '1') then
             r_next <=   (others=>'0');
         elsif (inc_cntr = '1') then

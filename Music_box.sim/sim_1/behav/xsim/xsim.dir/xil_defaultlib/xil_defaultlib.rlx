@@ -2,5 +2,15 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.srcs/sim_1/new/duration_cntr_tb.vhd,1551378153,vhdl,,,,duration_cntr_tb,,,,,,,,
-C:/Users/vwsko/Documents/GitHub/Music_box/Music_box.srcs/sources_1/new/duration_cntr.vhd,1551183089,vhdl,,,,duration_cntr,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sim_1/new/top_block_tb.vhd,1551650417,vhdl,,,,top_block_tb,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/ASCII_decoder.vhd,1551632746,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,ascii_decoder,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/addr_cntr.vhd,1551632156,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,addr_cntr,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/approve_ASCII.vhd,1551649673,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,approve_ascii,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/clk_divider.vhd,1551624306,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,clk_divider,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/duration_cntr.vhd,1551624306,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,duration_cntr,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/mod_m.vhd,1551624306,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd,,,mod_m_counter,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/ram.vhd,1551624306,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,ram_async,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,1551630796,vhdl,,,,top_block,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block_cntrl.vhd,1551645510,vhdl,,,,top_block_cntrl,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd,1551650166,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/top_block.vhd,,,uart,,,,,,,,
+D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart_rx.vhd,1551624306,vhdl,D:/programming/vhdl_projects/Music_box/Music_box.srcs/sources_1/new/uart.vhd,,,uart_rx,,,,,,,,

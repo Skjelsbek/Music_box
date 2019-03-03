@@ -97,7 +97,7 @@ begin
     c_approve_ASCII: entity work.approve_ASCII(arch)
         generic map
         (
-            DBIT => 8
+            DBIT => dbw
         ) 
         port map
         (

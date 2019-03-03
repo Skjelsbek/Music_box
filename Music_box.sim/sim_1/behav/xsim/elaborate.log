@@ -1,6 +1,6 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 356fedc3e4a64a3f8eb00039806da82b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot duration_cntr_tb_behav xil_defaultlib.duration_cntr_tb -log elaborate.log 
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 356fedc3e4a64a3f8eb00039806da82b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_block_tb_behav xil_defaultlib.top_block_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,6 +11,16 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture arch of entity xil_defaultlib.duration_cntr [duration_cntr_default]
-Compiling architecture behavioral of entity xil_defaultlib.duration_cntr_tb
-Built simulation snapshot duration_cntr_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.top_block_cntrl [top_block_cntrl_default]
+Compiling architecture arch of entity xil_defaultlib.mod_m_counter [\mod_m_counter(n=9,m=326)\]
+Compiling architecture arch of entity xil_defaultlib.uart_rx [uart_rx_default]
+Compiling architecture str_arch of entity xil_defaultlib.uart [uart_default]
+Compiling architecture arch of entity xil_defaultlib.duration_cntr [\duration_cntr(n=26,m=50000000)\]
+Compiling architecture arch of entity xil_defaultlib.addr_cntr [addr_cntr_default]
+Compiling architecture arch of entity xil_defaultlib.approve_ASCII [approve_ascii_default]
+Compiling architecture arch of entity xil_defaultlib.ram_async [ram_async_default]
+Compiling architecture arch of entity xil_defaultlib.ASCII_decoder [ascii_decoder_default]
+Compiling architecture arch of entity xil_defaultlib.clk_divider [clk_divider_default]
+Compiling architecture arch of entity xil_defaultlib.top_block [top_block_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_block_tb
+Built simulation snapshot top_block_tb_behav

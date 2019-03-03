@@ -30,9 +30,9 @@ end uart;
 architecture str_arch of uart is
 
     signal tick: std_logic;
-    signal rx_done_tick: std_logic;
+    signal rx_done_next, rx_done_tick: std_logic;
     --signal tx_fifo_out: std_logic_vector(7 downto 0);
-    signal rx_data_out: std_logic_vector(7 downto 0);
+    signal r_data_sig, r_data_next, rx_data_out: std_logic_vector(7 downto 0);
     --signal tx_empty, tx_fifo_not_empty: std_logic;
     --signal tx_done_tick: std_logic;
     
@@ -122,15 +122,28 @@ begin
 --            tx => tx
 --        );
 --    tx_fifo_not_empty <= not tx_empty;
-
-    process(rx_done_tick)
+    
+    process(clk, reset)
     begin
-        if(rx_done_tick = '1') then
-            r_data <= rx_data_out;
-        else
-            r_data <= (others => '0');
+        if (reset = '1') then
+            r_data_sig <= (others => '0');
+            rx_done <= '0';
+        elsif (rising_edge(clk)) then
+            r_data_sig <= r_data_next;
+            rx_done <= rx_done_next;
         end if;
     end process;
     
-    rx_done <= rx_done_tick;
+    process(rx_done_tick, rx_data_out, r_data_sig)
+    begin
+        r_data_next <= r_data_sig;
+        if(rx_done_tick = '1') then
+            r_data_next <= rx_data_out;
+--        else
+--            r_data_next <= (others => '0');
+        end if;
+    end process;
+    
+    rx_done_next <= rx_done_tick;
+    r_data <= r_data_sig;
 end str_arch;

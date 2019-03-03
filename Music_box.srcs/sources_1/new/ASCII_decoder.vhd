@@ -16,7 +16,7 @@ end ASCII_decoder;
 
 architecture arch of ASCII_decoder is
 	
-	signal freq: integer;
+	signal freq, freq_next: integer;
 	
     --frequency of desired notes as constants
     constant freq_A : integer := 440;--000;
@@ -34,7 +34,7 @@ architecture arch of ASCII_decoder is
     constant freq_small_f : integer := 698;--456;
     constant freq_small_g : integer := 783;--991;
 	
-	signal done_next: std_logic := '0';
+	signal done_sig, done_next: std_logic := '0';
 	signal max_count_next: std_logic_vector(7 downto 0);
 	
 begin
@@ -42,39 +42,44 @@ begin
     process (clk, rst)
     begin
         if (rst = '1') then
-            done <= '0';
+            done_sig <= '0';
             max_count <= (others => '0');
         elsif (rising_edge(clk)) then
             max_count <= max_count_next;
-            done <= done_next;
+            done_sig <= done_next;
+            freq <= freq_next;
         end if;
     end process;
     
-    process(play_en, note)
+    process(play_en, note, done_sig, freq)
     begin
+        done_next <= done_sig;
+        freq_next <= freq;
+        
         if (play_en = '1') then
             done_next <= '0';
             -- choose frequency based on input
             case note is
                 when x"20" => done_next <= '1';
-                when x"41" => freq <= freq_A;
-                when x"43" => freq <= freq_C;
-                when x"42" => freq <= freq_B;
-                when x"44" => freq <= freq_D;
-                when x"45" => freq <= freq_E;
-                when x"46" => freq <= freq_F;
-                when x"47" => freq <= freq_G;
-                when x"61" => freq <= freq_small_a;
-                when x"62" => freq <= freq_small_b;
-                when x"63" => freq <= freq_small_c;
-                when x"64" => freq <= freq_small_d;
-                when x"65" => freq <= freq_small_e;
-                when x"66" => freq <= freq_small_f;
-                when others => freq <= freq_small_g;
+                when x"41" => freq_next <= freq_A;
+                when x"43" => freq_next <= freq_C;
+                when x"42" => freq_next <= freq_B;
+                when x"44" => freq_next <= freq_D;
+                when x"45" => freq_next <= freq_E;
+                when x"46" => freq_next <= freq_F;
+                when x"47" => freq_next <= freq_G;
+                when x"61" => freq_next <= freq_small_a;
+                when x"62" => freq_next <= freq_small_b;
+                when x"63" => freq_next <= freq_small_c;
+                when x"64" => freq_next <= freq_small_d;
+                when x"65" => freq_next <= freq_small_e;
+                when x"66" => freq_next <= freq_small_f;
+                when others => freq_next <= freq_small_g;
              end case;        
         end if;						 			
     end process;
     
     max_count_next <= std_logic_vector(to_unsigned((10**(8)/(freq)), 8));
+    done <= done_sig;
     
 end arch;
