@@ -91,7 +91,7 @@ begin
                 end if;
             when others =>                
                 if (done = '0') then
-                    if (s_tick = '1') then
+                    if (s_tick = '1') then -- Presumably s_tick never goes high
                         inc_cntr_next <= '1';   
                         state_next <= increment;                     
                     end if;

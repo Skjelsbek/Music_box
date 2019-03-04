@@ -8,15 +8,15 @@ entity clk_divider is
     (
         clk, reset: in std_logic;
         en: in std_logic;
-        max_count: in std_logic_vector(7 downto 0);
+        max_count: in std_logic_vector(21 downto 0);
         divided_clk: out std_logic
     );
 end clk_divider;
 
 architecture arch of clk_divider is
 
-   signal r_reg: unsigned(7 downto 0);
-   signal r_next: unsigned(7 downto 0);
+   signal r_reg: unsigned(21 downto 0);
+   signal r_next: unsigned(21 downto 0);
    
 begin
    -- register

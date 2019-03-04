@@ -18,7 +18,7 @@ architecture arch of top_block is
     constant abw: integer := 8; -- addres bits width
     constant dbw: integer := 8; -- data bits width
     
-    signal max_count: std_logic_vector(7 downto 0);
+    signal max_count: std_logic_vector(21 downto 0);
     signal wr_en: std_logic;
     signal ab: std_logic_vector(abw - 1 downto 0);
     signal rdbi: std_logic_vector(dbw - 1 downto 0);

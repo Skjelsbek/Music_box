@@ -10,7 +10,7 @@ entity ASCII_decoder is
        note : in std_logic_vector(7 downto 0);
 	   --loopetyloop: out std_logic := '0';
 	   done: out std_logic := '0';
-       max_count : out std_logic_vector(7 downto 0)
+       max_count : out std_logic_vector(21 downto 0)
     );
 end ASCII_decoder;
 
@@ -35,7 +35,7 @@ architecture arch of ASCII_decoder is
     constant freq_small_g : integer := 783;--991;
 	
 	signal done_sig, done_next: std_logic := '0';
-	signal max_count_next: std_logic_vector(7 downto 0);
+	signal max_count_next: std_logic_vector(21 downto 0);
 	
 begin
 
@@ -79,7 +79,7 @@ begin
         end if;						 			
     end process;
     
-    max_count_next <= std_logic_vector(to_unsigned((10**(8)/(freq)), 8));
+    max_count_next <= std_logic_vector(to_unsigned((10**(8)/(freq)), 22));
     done <= done_sig;
     
 end arch;
